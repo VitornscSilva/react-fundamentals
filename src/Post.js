@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 
 import PostHeader from "./PostHeader";
 
-export default function Post({ theme, post, onRemove }) {
+export default function Post({ post, onRemove }) {
   return (
     <>
       <article>
         <PostHeader 
-          theme={theme}
           onRemove={onRemove}
           post={{
             id: post.id,
@@ -35,5 +34,4 @@ Post.propTypes = {
     likes: PropTypes.number.isRequired,
     read: PropTypes.bool.isRequired,
   }).isRequired,
-  theme: PropTypes.string.isRequired,
 }
