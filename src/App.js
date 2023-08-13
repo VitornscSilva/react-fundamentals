@@ -5,9 +5,9 @@ import Post from './Post';
 
 export default function App() {
   const [posts, setPosts] = useState([
-    { id: Math.random(), title: 'Title 1', subtitle: 'Subtitle 1', likes: 20 },
-    { id: Math.random(), title: 'Title 2', subtitle: 'Subtitle 2', likes: 10 },
-    { id: Math.random(), title: 'Title 3', subtitle: 'Subtitle 3', likes: 40 },
+    { id: Math.random(), title: 'Title 1', subtitle: 'Subtitle 1', likes: 20, read: true },
+    { id: Math.random(), title: 'Title 2', subtitle: 'Subtitle 2', likes: 10, read: false },
+    { id: Math.random(), title: 'Title 3', subtitle: 'Subtitle 3', likes: 40, read: false },
   ]);
 
   function handleRefresh() {
@@ -18,7 +18,8 @@ export default function App() {
           id: Math.random(),
           title: `Title ${prevState.length + 1}`,
           subtitle: `Subtitle ${prevState.length + 1}`,
-          likes: 40
+          likes: 40,
+          read: false,
         },
       ]);
     }, 2000);
@@ -42,13 +43,8 @@ export default function App() {
       {posts.map(post => (
         <Post
           key={post.id}
-          likes={post.likes}
           onRemove={handleRemovePost}
-          post={{
-            id: post.id,
-            title: post.title,
-            subtitle: post.subtitle,
-          }}
+          post={post}
         />
       ))}
     </>
