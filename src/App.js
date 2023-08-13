@@ -24,6 +24,12 @@ export default function App() {
     }, 2000);
   }
 
+  function handleRemovePost(postId) {
+    setPosts((prevState) => (
+      prevState.filter(post => post.id !== postId)
+    ));
+  }
+
   return (
     <>
       <Header>
@@ -35,9 +41,11 @@ export default function App() {
 
       {posts.map(post => (
         <Post
-          key={post.title}
+          key={post.id}
           likes={post.likes}
+          onRemove={handleRemovePost}
           post={{
+            id: post.id,
             title: post.title,
             subtitle: post.subtitle,
           }}
