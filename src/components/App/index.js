@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import Header from './Header';
-import Post from './Post';
-import { ThemeProvider } from './ThemeContext';
+import Header from '../Header';
+import Post from '../Post';
+import { ThemeProvider } from '../../context/ThemeContext';
 
-import styles from './App.scss';
+import { Title } from './styles';
 
 export default function App() {
   const [posts, setPosts] = useState([
@@ -41,7 +41,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2 className={styles.title}>Posts of the week</h2>
+        <Title as="h2">Posts of the week</Title>
         <button onClick={handleRefresh}>Refresh</button>
       </Header>
 
