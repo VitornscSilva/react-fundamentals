@@ -4,6 +4,8 @@ import Header from './Header';
 import Post from './Post';
 import { ThemeProvider } from './ThemeContext';
 
+import styles from './App.css';
+
 export default function App() {
   const [posts, setPosts] = useState([
     { id: Math.random(), title: 'Title 1', subtitle: 'Subtitle 1', likes: 20, read: true },
@@ -35,7 +37,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2>Posts of the week</h2>
+        <h2 className={styles.title}>Posts of the week</h2>
         <button onClick={handleRefresh}>Refresh</button>
       </Header>
 

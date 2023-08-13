@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
+import styles from './Header.css';
+
 import { ThemeContext } from './ThemeContext';
 
 export default function Header({ title, children }) {
@@ -9,7 +11,7 @@ export default function Header({ title, children }) {
 
   return (
     <div>
-      <h1>{title}</h1>
+      <h1 className={styles.title}>{title}</h1>
       <Button onClick={onToggleTheme}>
         Change Theme
       </Button>
