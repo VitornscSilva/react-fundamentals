@@ -8,9 +8,9 @@ import styles from './App.scss';
 
 export default function App() {
   const [posts, setPosts] = useState([
-    { id: Math.random(), title: 'Title 1', subtitle: 'Subtitle 1', likes: 20, read: true },
-    { id: Math.random(), title: 'Title 2', subtitle: 'Subtitle 2', likes: 10, read: false },
-    { id: Math.random(), title: 'Title 3', subtitle: 'Subtitle 3', likes: 40, read: false },
+    { id: Math.random(), title: 'Title 1', subtitle: 'Subtitle 1', likes: 20, read: true, removed: false, },
+    { id: Math.random(), title: 'Title 2', subtitle: 'Subtitle 2', likes: 10, read: false, removed: true, },
+    { id: Math.random(), title: 'Title 3', subtitle: 'Subtitle 3', likes: 40, read: false, removed: false, },
   ]);
 
   function handleRefresh() {
@@ -29,8 +29,12 @@ export default function App() {
   }
 
   function handleRemovePost(postId) {
-    setPosts((prevState) => (
-      prevState.filter(post => post.id !== postId)
+    setPosts((prevState) => prevState.map(
+      post => (
+        post.id === postId 
+          ? { ...post, removed: true }
+          : post
+      )
     ));
   }
 
