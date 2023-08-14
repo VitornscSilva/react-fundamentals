@@ -36,29 +36,29 @@ Throughout the commits in this repository, you'll witness the step-by-step proce
 
 ### 1. `useState`: Managing Component State
 
-We'll learn how to use the `useState` hook to manage component state effectively. See the commit [link to commit] for details.
+We'll learn how to use the `useState` hook to manage component state effectively.
 
 ### 2. `useMemo`: Optimizing Performance
 
-Explore how to utilize the `useMemo` hook to optimize component rendering performance. See the commit [link to commit] for details.
+Explore how to utilize the `useMemo` hook to optimize component rendering performance.
 
 ### 3. `useContext`: Global State Management
 
-Learn about the `useContext` hook to manage global state within your React app. See the commit [link to commit] for details.
+Learn about the `useContext` hook to manage global state within your React app.
 
 ## Styling Techniques Covered
 
 ### 1. CSS Modules
 
-Discover how to set up and use CSS modules to locally scope styles for your React components. See the commit [link to commit] for details.
+Discover how to set up and use CSS modules to locally scope styles for your React components.
 
 ### 2. SCSS Modules
 
-Explore the configuration and usage of SCSS modules for more advanced styling capabilities. See the commit [link to commit] for details.
+Explore the configuration and usage of SCSS modules for more advanced styling capabilities.
 
 ### 3. Styled Components
 
-Learn how to integrate Styled Components for writing component-scoped CSS with the power of JavaScript. See the commit [link to commit] for details.
+Learn how to integrate Styled Components for writing component-scoped CSS with the power of JavaScript.
 
 ## Usage
 
@@ -74,7 +74,3 @@ Contributions are welcome! If you find any issues or would like to add more expl
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-**Note**: The commits mentioned in this README are placeholders. To get the actual commits, please refer to the repository itself. This README provides a general structure and guidance for the repository's purpose.
