@@ -2,8 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   body {
-    background: #222;
+    background: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.textColor};
     font-family: sans-serif;
-    color: #fff;
+    padding-bottom: ${({ theme }) => theme.spacing.large};
   }
 `;
