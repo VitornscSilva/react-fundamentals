@@ -1,13 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 import Header from '../Header';
-import PostsList from '../PostsList';
+
+import Routes from '../../routes';
+
+import { Nav } from './styles';
 
 export default function Layout() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <PostsList />
-    </>
+      <Nav>
+        <Link to="/">Home</Link>
+        <Link to="/posts">Posts</Link>
+        <Link to="/posts/123?user=John">Post</Link>
+      </Nav>
+      <Routes />
+    </BrowserRouter>
   );
 }
